@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: hsl(275, 100%, 97%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Work Sans", sans-serif;
+    flex-direction: column;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: url(./assets/images/background-pattern-desktop.svg);
+        height: 320px;
+    }
+}
+
+
+
+main {
+    width: 550px;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 15px 0px  hsl(292, 42%, 14%);
+    border-radius:6px ;
+    -webkit-border-radius:6px ;
+    -moz-border-radius:6px ;
+    -ms-border-radius:6px ;
+    -o-border-radius:6px ;
+    h1 {
+        color:hsl(292, 42%, 14%);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 20px;
+        
+    }
+    
+    h1 img  {
+    width: 30px;
+    }
+
+    .parent {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    > .parent div {
+        font-size: 16px;
+        color:hsl(292, 42%, 14%);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: .3s;
+        margin-bottom: 10px;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+        img{ cursor: pointer;
+        }
+        &:hover {
+            color: hsl(292, 16%, 49%);
+            cursor: pointer;
+        }
+    }
+    .parent  p {
+        margin: 0 0 20px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: hsl(292, 16%, 49%);
+    }
+    
+}
+
+.none {
+    display: none;
+}
+
+@media (max-width:767px) {
+    body::before {
+        background: url(./assets/images/background-pattern-mobile.svg);
+        max-height: 232px;
+    }
+
+    main {
+        width: 90%;
+        /* margin-bottom: 100px; */
+    }
+}
+/* .parent:hover > div {
+    color:hsl(292, 16%, 49%) ;
+} */
